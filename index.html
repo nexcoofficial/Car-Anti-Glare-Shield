@@ -30,8 +30,10 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .kick{display:inline-block;background:var(--y);font-size:12px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;padding:3px 9px}
 h1{font-size:clamp(26px,7.4vw,38px);line-height:1.05;font-weight:900;letter-spacing:-.02em;text-transform:uppercase;margin:10px 0 10px}
 .lead{font-size:16.5px;max-width:34em}
-.price{display:none;align-items:baseline;gap:10px;border-top:3px solid var(--ink);margin-top:14px;padding-top:10px}
+.price{display:none;align-items:center;gap:12px;border-top:3px solid var(--ink);margin-top:14px;padding-top:10px}
 .price.on{display:flex}
+.price .tag{background:#111;color:var(--y);font-size:11.5px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:4px 8px}
+#promoTop{margin-top:12px}
 .now{font-size:32px;font-weight:900;letter-spacing:-.02em}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:16px;border:2px solid var(--ink)}
 .facts div{padding:10px 8px;text-align:center;font-size:13px;font-weight:700;line-height:1.25;border-right:2px solid var(--ink)}
@@ -59,52 +61,59 @@ summary:after{content:"+";position:absolute;right:2px;top:10px;font-size:22px;fo
 details[open] summary:after{content:"–"}
 details p{padding:0 0 14px;color:var(--mut);font-size:14.5px}
 #rev{display:none}
-.ord{background:#111;color:#fff;margin-top:44px;padding:36px 0 28px}
-.ord h2{font-size:24px;font-weight:600;text-transform:uppercase;line-height:1.2;margin:4px 0 10px}
-.ord .kick{font-size:12px;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;color:#f6c500}
-.ordsel{display:flex;gap:12px;align-items:center;border:1px solid rgba(255,255,255,.5);border-radius:3px;padding:8px 10px;margin:14px 0 16px;font-size:13.5px;min-height:62px}
-.ordsel img{width:40px;height:40px;object-fit:cover;flex:none;border-radius:2px}
-.ordsel b{display:block;font-size:11.5px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#f6c500}
-.ooef{--a:#111;--ink:#111;--ln:#cfcdc4;background:#fff;color:var(--ink);padding:18px;position:relative;min-height:120px;border-radius:3px}
+.ord{background:#111;color:#fff;margin-top:44px;padding:34px 0 26px}
+.ord .kick{color:#111}
+.ord h2{font-size:25px;font-weight:900;text-transform:uppercase;line-height:1.1;letter-spacing:-.01em;margin:10px 0 14px}
+.ordsel{display:flex;gap:12px;align-items:center;border:1px solid #3a3a37;padding:10px;margin:0 0 12px}
+.ordsel img{width:52px;height:52px;object-fit:cover;flex:none}
+.ordsel div{flex:1;min-width:0;line-height:1.25}
+.ordsel small{display:block;font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--y)}
+.ordsel span{font-size:14px;color:#d8d6cd}
+.ordsel b{font-size:22px;font-weight:900;white-space:nowrap}
+.promo{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--y);color:#111;padding:9px 12px;margin:0 0 12px;border:2px solid #111}
+.promo>span{font-size:12px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;line-height:1.2}
+.cd{display:flex;gap:4px;align-items:center;font-variant-numeric:tabular-nums}
+.cd b{background:#111;color:var(--y);font-size:18px;font-weight:900;min-width:34px;text-align:center;padding:3px 0;line-height:1.2}
+.cd i{font-style:normal;font-weight:900}
+.ord .promo{border-color:var(--y)}
+.ooef{--a:#111;--ink:#111;--ln:#c9c6bb;background:#fff;color:var(--ink);padding:20px 18px 18px;position:relative;min-height:120px;border-top:5px solid var(--y)}
 .ooef form.orderonline-embed-form{font-family:inherit;color:var(--ink)}
-.ooef form .section-title{margin:22px 0 10px;font-size:14px;font-weight:600;text-transform:uppercase;border-bottom:1px solid var(--ln);padding-bottom:8px}
-.ooef form .ooef-variations-table-wrapper:before{content:"Pilihan ukuran";display:block;margin:0 0 10px;font-size:14px;font-weight:600;text-transform:uppercase;border-bottom:1px solid var(--ln);padding-bottom:8px}
+.ooef form .section-title,.ooef form .ooef-variations-table-wrapper:before{display:block;margin:26px 0 12px;font-size:13px;font-weight:900;letter-spacing:1.1px;text-transform:uppercase;padding:0 0 0 10px;border:0;border-left:4px solid var(--y);line-height:1.2}
+.ooef form .ooef-variations-table-wrapper:before{content:"Pilihan produk";margin-top:0}
 .ooef form .ooef-variations-table-warning{margin-bottom:10px;font-size:13px;color:#111}
 .ooef form .ooef-variations-table,.ooef form .ooef-variations-table tbody{display:block;width:100%;border:0}
 .ooef form .ooef-variations-table thead{display:none}
-.ooef form .ooef-variations-table tr{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px;padding:10px 12px;border:1px solid var(--ln);border-radius:3px;background:#fff}
+.ooef form .ooef-variations-table tr{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px;padding:10px 12px;border:2px solid #111;background:#fff}
 .ooef form .ooef-variations-table td{display:block;width:auto;padding:0;border:0}
-.ooef form .oo-variation-label{font-size:14px;font-weight:500}
+.ooef form .oo-variation-label{font-size:14.5px;font-weight:700}
 .ooef form .input-number-controls{display:flex;align-items:center;flex-wrap:nowrap;gap:4px}
 .ooef form .input-number-controls .input-group-prepend,.ooef form .input-number-controls .input-group-append{display:flex;margin:0}
-.ooef form .input-number-controls .btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border:1px solid var(--ln);border-radius:3px;background:#fff;color:var(--ink);font-size:18px;line-height:1;box-shadow:none}
-.ooef form .input-number-controls .qty-plus{background:#111;color:#f6c500;border-color:#111}
-.ooef form .input-number-controls input.form-control{width:40px;height:34px;padding:0;border:0;background:transparent;box-shadow:none;text-align:center;font-size:15px;font-weight:600;-moz-appearance:textfield}
+.ooef form .input-number-controls .btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:2px solid #111;border-radius:0;background:#fff;color:#111;font-size:18px;font-weight:900;line-height:1;box-shadow:none}
+.ooef form .input-number-controls .qty-plus{background:#111;color:var(--y)}
+.ooef form .input-number-controls input.form-control{width:40px;height:36px;padding:0;border:0;background:transparent;box-shadow:none;text-align:center;font-size:16px;font-weight:800;-moz-appearance:textfield}
 .ooef form .input-number-controls input::-webkit-outer-spin-button,.ooef form .input-number-controls input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
-.ooef form .form-group{margin-bottom:10px}
-.ooef form label{font-size:13px;font-weight:500}
-.ooef form .ooef-field{width:100%;height:48px;padding:0 12px;box-sizing:border-box;border:1px solid var(--ln)!important;border-radius:3px!important;background:#fff!important;box-shadow:none;font-size:14px}
+.ooef form .form-group{margin-bottom:12px}
+.ooef form label{font-size:12.5px;font-weight:700;letter-spacing:.2px;margin-bottom:5px}
+.ooef form .ooef-field{width:100%;height:50px;padding:0 12px;box-sizing:border-box;border:1px solid var(--ln)!important;border-bottom:2px solid #111!important;border-radius:0!important;background:#faf9f5!important;box-shadow:none;font-size:15px}
 .ooef form textarea.ooef-field{height:auto;min-height:96px;padding:12px}
-.ooef form .ooef-field:focus{border-color:var(--ink)!important;outline:0;box-shadow:none}
+.ooef form .ooef-field:focus{border-color:#111!important;background:#fff!important;outline:0;box-shadow:none}
 .ooef form .select2-container{width:100%!important}
-.ooef form .select2-container--default .select2-selection--single{display:flex;align-items:center;height:48px;border:1px solid var(--ln);border-radius:3px;background:#fff}
-.ooef form .select2-container--default .select2-selection--single .select2-selection__rendered{padding-left:12px;line-height:46px;color:var(--ink)}
-.ooef form .select2-container--default .select2-selection--single .select2-selection__arrow{top:0;right:8px;height:46px}
+.ooef form .select2-container--default .select2-selection--single{display:flex;align-items:center;height:50px;border:1px solid var(--ln);border-bottom:2px solid #111;border-radius:0;background:#faf9f5}
+.ooef form .select2-container--default .select2-selection--single .select2-selection__rendered{padding-left:12px;line-height:48px;color:var(--ink)}
+.ooef form .select2-container--default .select2-selection--single .select2-selection__arrow{top:0;right:8px;height:48px}
 .ooef form .ooef-payment-options{display:flex;flex-direction:column;gap:6px}
-.ooef form .ooef-payment-option{display:block;margin:0;padding:12px;border:1px solid var(--ln);border-radius:3px;background:#fff;cursor:pointer;font-weight:500}
-.ooef form .ooef-payment-option:has(input:checked){border:2px solid var(--ink);background:var(--soft)}
+.ooef form .ooef-payment-option{display:block;margin:0;padding:13px 12px;border:1px solid var(--ln);border-radius:0;background:#fff;cursor:pointer;font-weight:700}
+.ooef form .ooef-payment-option:has(input:checked){border:2px solid #111;background:#fbf0b8}
 .ooef form .ooef-payment-option img{width:auto;height:24px;margin-right:8px;vertical-align:middle}
-.ooef form .ooef-payment-method{accent-color:var(--ink)}
-.ooef form .order-summary{margin:20px 0 14px;padding:14px;border:1px solid var(--ln);border-radius:3px;background:#fff}
-.ooef form .order-summary-header{margin-bottom:8px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none}
+.ooef form .ooef-payment-method{accent-color:#111}
+.ooef form .order-summary{margin:22px 0 14px;padding:14px;border:2px solid #111;border-radius:0;background:#faf9f5}
+.ooef form .order-summary-header{margin-bottom:8px;font-size:12px;font-weight:900;letter-spacing:1.1px;text-transform:uppercase;text-decoration:none}
 .ooef form .order-summary-item{justify-content:space-between;padding:4px 0;font-size:14px}
-.ooef form .order-summary-item-total{margin-top:6px;padding-top:10px;border-top:1px solid var(--ln);font-size:16px;font-weight:600;color:#111}
-.ooef form .checkout-actions .btn-complete-order{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:52px;border:0;border-radius:3px!important;background:#f6c500!important;color:#111!important;font-size:14px;font-weight:500;letter-spacing:1.12px;text-transform:uppercase;box-shadow:none}
+.ooef form .order-summary-item-total{margin-top:6px;padding-top:10px;border-top:2px solid #111;font-size:17px;font-weight:900;color:#111}
+.ooef form .checkout-actions .btn-complete-order{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:56px;border:2px solid #111!important;border-radius:0!important;background:var(--y)!important;color:#111!important;font-size:15px;font-weight:900;letter-spacing:1px;text-transform:uppercase;box-shadow:4px 4px 0 #111}
+.ooef form .checkout-actions .btn-complete-order:active{box-shadow:none;transform:translate(4px,4px)}
 .ooef form .checkout-actions .btn-complete-order svg{width:20px;height:20px}
-.ooef .oo-hl,.ooef tr.oo-hl{background:var(--soft)!important}
-
 .ooef .oo-hl,.ooef tr.oo-hl{background:#fbf0b8!important}
-.ooef form .order-summary-item-total{color:#111}
 #order{scroll-margin-top:12px}
 footer{padding:22px 0 8px;text-align:center;font-size:12px;color:#8a877e}
 .bar{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:3px solid var(--ink);padding:9px 14px;display:flex;gap:12px;align-items:center;justify-content:center;transform:translateY(110%);transition:transform .25s;z-index:20}
@@ -130,7 +139,8 @@ img.bad{visibility:hidden}
     <span class="kick">Pasang di sun visor</span>
     <h1>Pelindung Kaca Anti Silau</h1>
     <p class="lead">Dua lensa dalam satu alat: kuning untuk malam dan hujan, abu gelap untuk siang yang terik. Jepit di sun visor, atur sudutnya, selesai.</p>
-    <div class="price" id="price"><span class="now" id="pnow"></span></div>
+    <div class="price" id="price"><span class="now" id="pnow"></span><span class="tag">Harga promo</span></div>
+    <div class="promo" id="promoTop"><span>Promo berakhir dalam</span><div class="cd"><b data-h>00</b><i>:</i><b data-m>00</b><i>:</i><b data-s>00</b></div></div>
     <div class="facts"><div><b>2</b>Warna lensa</div><div><b>32×12</b>cm ukuran lensa</div><div><b>Klip</b>Pasang mudah</div></div>
     <button class="cta" id="cta">Pesan sekarang</button>
   </div>
@@ -186,6 +196,8 @@ img.bad{visibility:hidden}
 <section class="ord" id="orderSec"><div class="w">
   <div class="kick">Langkah terakhir</div>
   <h2>Isi data &amp; pesan</h2>
+  <div class="ordsel"><img src="images/pelindung-silau-01.webp" width="52" height="52" alt=""><div><small>Harga promo</small><span>Pelindung Kaca Anti Silau</span></div><b id="ordp"></b></div>
+  <div class="promo"><span>Promo berakhir dalam</span><div class="cd"><b data-h>00</b><i>:</i><b data-m>00</b><i>:</i><b data-s>00</b></div></div>
   <div id="order">
 <!-- OrderOnline Embed Code - v8.0.2 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="car-anti-glare-shield" data-product-id="6b0005c49c52203c23049448" id="oo-embed-form-car-anti-glare-shield-1686" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.2', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.2';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '6b0005c49c52203c23049448', '6b0005c49c52203c23049449', 'oo-embed-form-car-anti-glare-shield-1686', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
   </div>
@@ -199,13 +211,20 @@ img.bad{visibility:hidden}
 </div>
 
 <script>
-const CFG={price:0,rating:'',sold:''};
+const CFG={price:177000,rating:'',sold:''};
 const REVIEWS=[];
 const SLIDES=[1,5,3];
 const $=s=>document.querySelector(s);
 const rp=n=>'Rp'+n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');
-if(CFG.price>0){$('#price').classList.add('on');$('#pnow').textContent=rp(CFG.price);$('#barprice').textContent=rp(CFG.price)}
+if(CFG.price>0){$('#price').classList.add('on');$('#pnow').textContent=rp(CFG.price);$('#barprice').textContent=rp(CFG.price);$('#ordp').textContent=rp(CFG.price)}
+else{document.querySelectorAll('.ordsel,#promoTop').forEach(e=>e.style.display='none')}
 if(REVIEWS.length){$('#rev').style.display='block'}
+const pad=n=>String(n).padStart(2,'0');
+function tick(){const n=new Date(),e=new Date(n);e.setHours(24,0,0,0);let s=Math.max(0,Math.floor((e-n)/1000));
+ const h=pad(Math.floor(s/3600)),m=pad(Math.floor(s%3600/60)),x=pad(s%60);
+ document.querySelectorAll('.cd').forEach(c=>{c.querySelector('[data-h]').textContent=h;c.querySelector('[data-m]').textContent=m;c.querySelector('[data-s]').textContent=x});
+ setTimeout(tick,1000-n.getMilliseconds())}
+tick();
 const gal=$('#gal'),dots=$('#dots');
 SLIDES.forEach((n,i)=>{const d=document.createElement('div');const im=new Image();im.width=620;im.height=620;im.alt='Pelindung kaca anti silau foto '+(i+1);if(i){im.loading='lazy';im.decoding='async'}else{im.fetchPriority='high'}im.src='images/pelindung-silau-'+String(n).padStart(2,'0')+'.webp';d.appendChild(im);gal.appendChild(d);dots.appendChild(document.createElement('i'))});
 const setDot=()=>{const i=Math.round(gal.scrollLeft/gal.clientWidth);[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i))};
